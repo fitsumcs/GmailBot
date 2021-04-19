@@ -1,5 +1,5 @@
 import smtplib
-import speech_recognition as sr
+import speech_recognition as sp
 import pyttsx3
 from email.message import EmailMessage
 
