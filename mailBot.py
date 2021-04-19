@@ -26,7 +26,22 @@ def get_voice():
         pass
 
 # Get Email Information to be send 
-def getEmail_Info():
+def sendEmail(receiver, subject, message):
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        # Login with google account 
+        server.login('Sender Email', 'Sender Email Password')
+        email = EmailMessage()
+        email['From'] = 'Sender Email'
+        email['To'] = receiver
+        email['Subject'] = subject
+        email.set_content(message)
+        server.send_message(email)
+
+
+
+
+
 
     
 
