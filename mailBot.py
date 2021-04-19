@@ -18,14 +18,14 @@ def get_voice():
             audio = listener.listen(source)
     try:
             text = listener.recognize_google(audio)
-            print(text)
-            # return text.lower()
+        #     print(text)
+            return text.lower()
 
     except Exception as e :
         print(e)
         pass
 
-# Get Email Information to be send 
+# Send Email  
 def sendEmail(receiver, subject, message):
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
@@ -37,6 +37,13 @@ def sendEmail(receiver, subject, message):
         email['Subject'] = subject
         email.set_content(message)
         server.send_message(email)
+
+def talkUser(message):
+        engine.say(text)
+        engine.runAndWait()
+
+
+
 
 
 
