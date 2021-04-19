@@ -27,16 +27,16 @@ def get_voice():
 
 # Send Email  
 def sendEmail(receiver, subject, message):
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
+        mail_server = smtplib.SMTP('smtp.gmail.com', 587)
+        mail_server.starttls()
         # Login with google account 
-        server.login('Sender Email', 'Sender Email Password')
-        email = EmailMessage()
-        email['From'] = 'Sender Email'
-        email['To'] = receiver
-        email['Subject'] = subject
-        email.set_content(message)
-        server.send_message(email)
+        mail_server.login('Sender Email', 'Sender Email Password')
+        email_info = EmailMessage()
+        email_info ['From'] = 'Sender Email'
+        email_info ['To'] = receiver
+        email_info ['Subject'] = subject
+        email_info .set_content(message)
+        mail_server.send_message(email_info )
 
 def talkUser(message):
         engine.say(message)
