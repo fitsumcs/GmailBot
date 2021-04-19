@@ -39,7 +39,7 @@ def sendEmail(receiver, subject, message):
         server.send_message(email)
 
 def talkUser(message):
-        engine.say(text)
+        engine.say(message)
         engine.runAndWait()
 
 
