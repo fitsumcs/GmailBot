@@ -51,7 +51,7 @@ def init():
         talkUser('Tell us the Body of the mail')
         body = get_info()
         sendEmail(receiver_email, subject, body)
-        talk('Hey lazy Humankind. Your email is sent')
+        talkUser('Hey lazy Humankind. Your email is sent')
         talkUser('Do you want to send more email?')
         send_more = get_info()
         if 'yes' in send_more:
