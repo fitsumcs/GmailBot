@@ -1,6 +1,10 @@
-import speech_recognition as sp
+import smtplib
+import speech_recognition as sr
+import pyttsx3
+from email.message import EmailMessage
 
 listener = sp.Recognizer()
+engine = pyttsx3.init()
 
 # for index, name in enumerate(sp.Microphone.list_microphone_names()):
 #     print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
@@ -22,8 +26,13 @@ def get_voice():
         pass
 
 # Get Email Information to be send 
-# def getEmail_Info():
+def getEmail_Info():
+
     
+
+
+
+
 
 
 get_voice()
