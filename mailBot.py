@@ -42,6 +42,23 @@ def talkUser(message):
         engine.say(message)
         engine.runAndWait()
 
+def init():
+        talkUser('Welcome to our new Gmail Bot ')
+        talkUser('Tell us the Receiver of the mail')
+        receiver_email = get_info()
+        talkUser('Tell us the Subject of the mail')
+        subject = get_info()
+        talkUser('Tell us the Body of the mail')
+        body = get_info()
+        sendEmail(receiver_email, subject, body)
+        talk('Hey lazy Humankind. Your email is sent')
+        talkUser('Do you want to send more email?')
+        send_more = get_info()
+        if 'yes' in send_more:
+                init()
+init()
+
+
 
 
 
