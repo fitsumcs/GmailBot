@@ -18,7 +18,7 @@ def get_voice():
             audio = listener.listen(source)
     try:
             text = listener.recognize_google(audio)
-        #     print(text)
+            #print(text)
             return text.lower()
 
     except Exception as e :
